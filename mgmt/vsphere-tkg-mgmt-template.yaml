@@ -1,0 +1,72 @@
+#! ---------------------------------------------------------------------
+#! Basic cluster creation configuration
+#! ---------------------------------------------------------------------
+
+CLUSTER_NAME: ${CLUSTER_NAME}
+CLUSTER_PLAN: dev
+INFRASTRUCTURE_PROVIDER: vsphere
+ENABLE_CEIP_PARTICIPATION: "true"
+# TMC_REGISTRATION_URL:
+ENABLE_AUDIT_LOGGING: true
+CLUSTER_CIDR: 100.96.0.0/11
+SERVICE_CIDR: 100.64.0.0/13
+
+#! ---------------------------------------------------------------------
+#! vSphere configuration
+#! ---------------------------------------------------------------------
+VSPHERE_SERVER: ${VSPHERE_SERVER}
+VSPHERE_PASSWORD: ${VSPHERE_PASSWORD}
+VSPHERE_USERNAME: ${VSPHERE_USERNAME}
+VSPHERE_DATACENTER: ${VSPHERE_DATACENTER}
+VSPHERE_RESOURCE_POOL: ${VSPHERE_RESOURCE_POOL}
+VSPHERE_DATASTORE: ${VSPHERE_DATASTORE}
+VSPHERE_FOLDER: ${VSPHERE_FOLDER}
+VSPHERE_NETWORK: ${VSPHERE_NETWORK}
+VSPHERE_CONTROL_PLANE_ENDPOINT: ${VSPHERE_CONTROL_PLANE_ENDPOINT}
+VSPHERE_SSH_AUTHORIZED_KEY: ${VSPHERE_SSH_AUTHORIZED_KEY}
+VSPHERE_INSECURE: true
+DEPLOY_TKG_ON_VSPHERE7: true
+ENABLE_TKGS_ON_VSPHERE7: false
+
+#! ---------------------------------------------------------------------
+#! Node configuration
+#! ---------------------------------------------------------------------
+VSPHERE_CONTROL_PLANE_DISK_GIB: "20"
+VSPHERE_CONTROL_PLANE_MEM_MIB: "8192"
+VSPHERE_CONTROL_PLANE_NUM_CPUS: "4"
+VSPHERE_WORKER_DISK_GIB: "20"
+VSPHERE_WORKER_MEM_MIB: "8192"
+VSPHERE_WORKER_NUM_CPUS: "4"
+
+#! ---------------------------------------------------------------------
+#! Machine Health Check configuration
+#! ---------------------------------------------------------------------
+ENABLE_MHC: "true"
+MHC_UNKNOWN_STATUS_TIMEOUT: 5m
+MHC_FALSE_STATUS_TIMEOUT: 12m
+
+#! ---------------------------------------------------------------------
+#! Image repository configuration
+#! ---------------------------------------------------------------------
+
+TKG_CUSTOM_IMAGE_REPOSITORY: registry.rainpole.io/library
+TKG_CUSTOM_IMAGE_REPOSITORY_CA_CERTIFICATE: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUZxRENDQTVDZ0F3SUJBZ0lKQU1iZ0dmbzN1QVh4TUEwR0NTcUdTSWIzRFFFQkRRVUFNRlV4Q3pBSkJnTlYKQkFZVEFsVlRNUk13RVFZRFZRUUlEQXBEWVd4cFptOXlibWxoTVJJd0VBWURWUVFIREFsUVlXeHZJRUZzZEc4eApIVEFiQmdOVkJBTU1GSEpsWjJsemRISjVMbkpoYVc1d2IyeGxMbWx2TUI0WERUSXdNVEl6TURJeU1qYzFObG9YCkRUTXdNVEl5T0RJeU1qYzFObG93VlRFTE1Ba0dBMVVFQmhNQ1ZWTXhFekFSQmdOVkJBZ01Da05oYkdsbWIzSnUKYVdFeEVqQVFCZ05WQkFjTUNWQmhiRzhnUVd4MGJ6RWRNQnNHQTFVRUF3d1VjbVZuYVhOMGNua3VjbUZwYm5CdgpiR1V1YVc4d2dnSWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUNEd0F3Z2dJS0FvSUNBUUMxdVFMUWxoWWNqTUcvCnhrZEdFVE4vazEzLzBnQlhJTVAyRmU2Ynp1dkdVU0Q5c1pXa0tpejdpVkRuMVk1dG1OM2J2OUhQNXA1UXhqQTMKMnZDbURDN1E5RitNSzZnRkRhM2UyWkIySVNXemtnRnRtdC83RjkybzRoZDQ4ZStPVnU0V1h4Mjl3aXBkMUMzMwpsVVhyS09Tc3VQMkZTMEdxMHlFMWhwb0N4NXljYjhnb1A4ZWhRZnk0dDZDZEdUVXBDd00rcFZxVTZzcXMwQ2R3CjhJZDIyR3Fkd3F2MEZ0eGFwTFhJSHNGNFRIUHpQT0hTZU05RTlkaFVuKzVSV3RndWlmYnpLbHdYM2JHbnAvR24KY0ZuQVJ2a1NqM0s2U3NONGVwWS9keVY2a2tSSndaZnMzNkI5aGJpS2pJWmN6bmwwR2U2a05taVhhNUVQYzdBOQpDREFpMW9PakVBSEI0TUprTGxxTjJOVXZQYkthODVYdGVrOSt6VVR4eTlJaThSRlExbXlwLzlORXFPQ2d1bTRkClYwbktJU2hDNFJkYldEb2trbnEyZjlwZnRnTytXbjd3cE45R1Q2VjVWcndRODEzeHBBdEhzSkI4bUpnb2lxczEKMWhJdjRJWndFa24vK3B2QW9sSENTbU4vd2crQXJmUktLWlFlb3E1ak1Yb2MyNksrSW9iMVphWnB2Z00wLytaOQoyMmdTUDJpbVBpNE9lWXYrS1hCZkw3eTVNNWgxc3RJNjNTNVVqVDdjbWpvK0p2R3V0empxQkVYRDlPKzFwMEN3ClVVdHdwc1dsTVluMzV4bTgyNytaSDVuYUFBUUZzUXJZb3pUd090YXlMYmVOeVBzLy8xV0thSk53L0dNdzlNNUEKZ3EvdGpoUWIvOGROaEpreTVWdkZVM25hRjE3bVR3SURBUUFCbzNzd2VUQWZCZ05WSFNNRUdEQVdnQlMwWDM4dgoxaytIdXRTOEl5c3BXd2pUOWdNenZEQUpCZ05WSFJNRUFqQUFNQXNHQTFVZER3UUVBd0lFOERBVEJnTlZIU1VFCkREQUtCZ2dyQmdFRkJRY0RBVEFwQmdOVkhSRUVJakFnZ2hSeVpXZHBjM1J5ZVM1eVlXbHVjRzlzWlM1cGI0SUkKY21WbmFYTjBjbmt3RFFZSktvWklodmNOQVFFTkJRQURnZ0lCQUttaXh5RVBmcHZwY3pqMWh0YnZTSjdZNms1NgpzckdJOFRnTnplVkxXYlR1Yk9pYnphZ2tLTkR0MzhTUzdQUFpESTFVZDhNNlB4QUxvUitlVTBOdlJhZ2d4eStQCmFZWkZ4UzlDVVFoTTNSTmJyVk5qb1ExZXJNdjlZQ28wVFZFUGE3ZDlQQUErdXNtVUxUd0JRQmxDbk5yVVVHQW4Kb1F2VXJXZUhkdmdqTUVNRkZPU1R6ZHBGRU1vK3kvQ0dzQU5TT1RHQ2xJTzlhMDc1d005ZHgzZVZ0YkhUbWZHNAo3V1E3aW0zYzNZd25WcEJJUUxRUUVrbFpSV0U2YnhoR2pQMkhCTnZMUUExVHdIeGliQXB6Qi8xYkt2enhKU2ZGCmJWSWN4UmQyN0hWRVIzTjZoU2MvcXdjdHZtN002TzRhSlBXcjJlRVRMOWdQcWoxQXR5d0RyTzlpT0p3UU0reW0KeDAvUEZtRGZUMWRmcTRGb0MySmcxYThwM0MreXFHampuZU80TW5hYUN5V3J5MHpuUGpJaGRHdFVBVjVPTmNwZgp1QWtWd1NoQkhaWk9SMnNSL3VlQitoODJzNUdwUUN6b09Uays5UjltSHp4d2c5UEdwdGhGeThNTFppZFhseDhVCkt4ZXRFdTFyTzJhbDF5cGFyT2VHelA5d3dkcUVEZzhScFY2MlBReUhGU1d1TlhDME1ybEdLS2xycUxVQ1VYZ00KbGZiY2xmT0N4UlJwNXczcVhFd1gvaUhUWmFsVkZ6cCtmMzAxYy9jVmE2MUFUZWk3L3RKc3RSZUVOSEtLaGd4awpDUHdjdW1IaGtVQWk3aXRjcWNnMEExQ3BUQWF6SytRTXlaUk95WVhYTDU4TWd5K3hvcCt0RnpQQVhDZnFDelVSCkljcDFhc3FFbXFHVHBqOU4KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+
+#! ---------------------------------------------------------------------
+#! Proxy configuration
+#! ---------------------------------------------------------------------
+
+TKG_HTTP_PROXY_ENABLED: "false"
+# TKG_HTTP_PROXY: ""
+# TKG_HTTPS_PROXY: ""
+# TKG_NO_PROXY: ""
+
+#! ---------------------------------------------------------------------
+#! Identity management configuration
+#! ---------------------------------------------------------------------
+IDENTITY_MANAGEMENT_TYPE: none
+
+#! ---------------------------------------------------------------------
+#! NSX Advanced Load Balancer configuration
+#! ---------------------------------------------------------------------
+AVI_ENABLE: "false"
