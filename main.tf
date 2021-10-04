@@ -28,4 +28,4 @@ resource "random_password" "kickoffvm_password" {
   override_special = "_%@"
 }
 
-
+### Put all data into file step1 under tkg directory (this file will be used by the other tkg module for further operations)

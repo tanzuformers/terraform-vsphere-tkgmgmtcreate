@@ -1,8 +1,11 @@
 variable "output_path"{
     type = string
     default = "."
+    description = "Local path folder for input/output files (kubectl)"
 }
+
 variable "vsphere_env" {
+    description = "vCenter connection variables"
     type = object({
         server = string
         user = string
@@ -17,6 +20,7 @@ variable "vsphere_env" {
 
 ## Suggested a dedicated env for tkg clusters
 variable "tkg_env" {
+    description = "All Environment elements to place TKG clusters"
     type = object({
         datacenter_name = string
         cluster_name = string
@@ -38,6 +42,7 @@ variable "tkg_env" {
 }
 
 variable "tkg_network" {
+    description = "All networking elements for TKG Clusters"
     type = object({
         network_id = string
         gateway = string
@@ -59,6 +64,7 @@ variable "tkg_network" {
 }
 
 variable tkg_bootvm {
+    description = "All settings for BootVM"
     type = object({
         image_name = string
         name = string
@@ -74,6 +80,7 @@ variable tkg_bootvm {
 }
 
 variable "tkg_mgmt" {
+    description = "All elements required Management Cluster"
     type = object({
         ip = string
         loadbalancer_cidr = string
