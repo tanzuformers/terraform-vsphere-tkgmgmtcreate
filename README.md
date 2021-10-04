@@ -64,7 +64,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_bootstrap_server_ip"></a> [bootstrap\_server\_ip](#output\_bootstrap\_server\_ip) | n/a |
-| <a name="output_bootstrap_server_root_password"></a> [bootstrap\_server\_root\_password](#output\_bootstrap\_server\_root\_password) | n/a |
-| <a name="output_kubctl_config"></a> [kubctl\_config](#output\_kubctl\_config) | n/a |
+| <a name="output_bootstrap_server_ip"></a> [bootstrap\_server\_ip](#output\_bootstrap\_server\_ip) | BootVM ip |
+| <a name="output_bootstrap_server_root_password"></a> [bootstrap\_server\_root\_password](#output\_bootstrap\_server\_root\_password) | BootVM generated password |
+| <a name="output_kubctl_config"></a> [kubctl\_config](#output\_kubctl\_config) | Kubeconf for MGMT cluster content |
 <!-- END_TF_DOCS -->
